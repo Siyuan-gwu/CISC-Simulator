@@ -1,19 +1,28 @@
 package edu.gwu.seas.csci;
 
 public class Instructions {
+// 	public int binary_to_int(String binary_number){
+// 		//initialize the return value
+// 		int number = 0;
+// 		for (int i = binary_number.length() - 1; i > 0; i--) {
+// 			//calculate the weight on every digit
+// 			number = number + ((int)binary_number.charAt(i) - (int)('0')) * (int)(Math.pow(2, binary_number.length() - 1 - i));
+// 		}
+// 		return number;
+// 	}
+	
 	//a useful function to convert binary string to integer
-	public int binary_to_int(String binary_number){
-		//initialize the return value
-		int number = 0;
-		for (int i = binary_number.length() - 1; i > 0; i--) {
-			//calculate the weight on every digit
-			number = number + ((int)binary_number.charAt(i) - (int)('0')) * (int)(Math.pow(2, binary_number.length() - 1 - i));
-		}
-		return number;
-	}
+	private int binary_to_int(String str){
+        //initialize the return value
+            int number = 0;
+            for (int i = 0; i < str.length(); i++) {
+            	number = number * 2 + (str.charAt(i) - '0');
+            }
+            return number;
+    	}
 	
 	//another useful function to convert integer into binary string
-	public String int_to_binary(int number){
+	private String int_to_binary(int number){
 		String binary_number = Integer.toBinaryString(number);
 		return binary_number;
 	}
