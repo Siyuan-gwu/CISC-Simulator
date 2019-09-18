@@ -60,12 +60,6 @@ public class GUIPanel extends JFrame {
         InitInputConsole("Please type 16 bits instruction", true);
         // Buttons Initializer
         InitButton();
-        // CPU Initializer
-//        InitCPU();
-
-//        this.OPCodeTag = false;
-//        this.Program2Tag = false;
-//        this.Program4Tag = false;
     }
 
     /*
